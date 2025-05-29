@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ver modelo 3D en AR</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: #f8f8f8;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    model-viewer {
+      width: 100%;
+      height: 90vh;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Explora el modelo en AR</h1>
+
+  <model-viewer
+    src="modelo.glb"
+    alt="Modelo en 3D"
+    ar
+    ar-modes="scene-viewer quick-look webxr"
+    camera-controls
+    auto-rotate
+    shadow-intensity="1"
+    environment-image="neutral">
+  </model-viewer>
+
+  <p>Escanea con tu celular para colocarlo en el entorno real.</p>
+
+</body>
+</html>
